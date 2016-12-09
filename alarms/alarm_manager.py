@@ -208,6 +208,9 @@ class Alarm_Manager(Thread):
 		#Trigger the notifcations
 		log.info(name + " notication was triggered!")
 		timestamps = get_timestamps(dissapear_time)
+		
+		#Check Pokemon Specific Message
+		pkmn_message = filter.get('message') or None
 
 		pkmn_info = {
 			'id': str(pkmn_id),
